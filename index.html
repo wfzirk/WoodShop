@@ -9,37 +9,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<title>Search SUN Spreadsheet</title>
+<title>Search WoodShop Spreadsheet</title>
 <style>
-	/*
-	@font-face {
-		font-family: "SUNBF78_909_EN";
-		src: url("SUNBF78_909_EN.woff") format('woff'),
-			  url("SUNBF78_909_EN.ttf") format(truetype);
-	}
-	@font-face {
-		font-family: "SUN7_8_909";
-		src: url("SUN7_8_909.woff") format('woff'),
-			  url("SUN7_8_909.ttf") format(truetype);
-	}
 
-	*/
-	@font-face {
-		font-family: "SUNBF7_8_1210_EN";
-		src: url("SUNBF7_8_1210_EN.woff") format('woff'),
-			  url("SUNBF7_8_1210_EN.ttf") format(truetype);
-	}
-	@font-face {
-		font-family: "SUN7_8_1210";
-		src: url("SUN7_8_1210.woff") format('woff'),
-			  url("SUN7_8_1210.ttf") format(truetype);
-	}
-
-	
-	:root {
-		--sun-font: 'SUN78_909';
-	}
-	
 	html { height:100%; }
 		
 	body {
@@ -114,49 +86,51 @@
 		font-size: 14px;
 		word-wrap: break-word;
 		min-width: 25px;
-	}
+		
 
-	.xreftable td.nameCol, .xreftable th.nameCol {
-		 word-wrap: break-word;
-		 width: 100px;
 	}
 	
-	.xreftable td.synCol, .xreftable th.synCol {
-		line-height: 15px;
-		width: 120px;
-	}
-	.xreftable td.xrefCol, .xreftable th.xrefCol {
-		/*vertical-align: top;*/
-		line-height: 15px;
+	.xreftable th {
+		font-weight: bold;
 	}
 
-	.xreftable td.fonticon {
-		font-size: 32px;
-		font-family: var(--sun-font); 
-		vertical-align: middle;
+	.xreftable  td.Col3 , .xreftable  td.Col4, .xreftable  td.Col5  {
+		text-align: right;
 		color: blue;
-		width: 45px;
-		height: 100%;
-	}
-	.xreftable th.fonticon {
-		text-align: center;
-		color: blue;
-		width: 45px;
+		width: 50px;
 	}
 	
-	.xreftable td.unicol {
-		text-align: center;
-		font-size: 14px;
-		font-family: var(--sun-font); 
-		color: blue;
-		width: 60px;
-	}
-	.xreftable th.unicol {
+	.xreftable th.Col5 {
 		text-align: center;
 		color: blue;
-		width: 60px;
+		width: 50px;
 	}
 
+	
+	.xreftable  td.Col6 {
+		text-align: left;
+		color: blue;
+		width: 250px;
+	}
+	
+	.xreftable th.Col6 {
+		text-align: center;
+		color: blue;
+		width: 250px;
+	}
+	
+	.xreftable td.Col8 {
+		text-align: left;
+		color: blue;
+		width: 100px;
+	}
+	
+	.xreftable th.Col8 {
+		text-align: center;
+		color: blue;
+		width: 100px;
+	}
+		
 		
 
 		 /*Table Even Rows Styles*/
@@ -193,72 +167,7 @@
 	}
 	
 
-	/* The Modal (background) */
-	.modal {
-	  display: none; /* Hidden by default */
-	  position: fixed; /* Stay in place */
-	  z-index: 1; /* Sit on top */
-	  padding-top: 100px; /* Location of the box */
-	  left: 0;
-	  top: 0;
-	  width: 100%; /* Full width */
-	  height: 100%; /* Full height */
-	  overflow: auto; /* Enable scroll if needed */
-	  background-color: rgb(0,0,0); /* Fallback color */
-	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	}
 
-	/* Modal Content */
-	.modal-content {
-	  position: relative;
-	  background-color: #eeeeee;
-	  margin: auto;
-	  padding: 0;
-	  border: 1px solid #888;
-	  border-radius:5px;
-	  width: 300px;;
-	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	  -webkit-animation-name: animatetop;
-	  -webkit-animation-duration: 0.4s;
-	  animation-name: animatetop;
-	  animation-duration: 0.4s
-	}
-
-	/* Add Animation */
-	@-webkit-keyframes animatetop {
-	  from {top:-300px; opacity:0} 
-	  to {top:0; opacity:1}
-	}
-
-	@keyframes animatetop {
-	  from {top:-300px; opacity:0}
-	  to {top:0; opacity:1}
-	}
-
-	/* The Close Button */
-	.close {
-	  color: white;
-	  float: right;
-	  font-size: 28px;
-	  font-weight: bold;
-	}
-
-	.close:hover,
-	.close:focus {
-	  color: #000;
-	  text-decoration: none;
-	  cursor: pointer;
-	}
-
-	.modal-header {
-	  padding: 1px 5px;
-	  background-color: red;
-	  color: white;
-	  font-size: 28px;
-	  font-weight: bold;
-	}
-
-	.modal-body {padding: 2px 16px;}
 
 </style>
 </head>
@@ -323,16 +232,16 @@
 
 <footer>
     <center>
-		<!--<font face="SUN7.24"> -->
-      <p id="copyright">&copy; Wilbur Zirk 2020 &#xe000;
+		
+      <p id="copyright">&copy; Wilbur Zirk 2021;
 	  </p>
-	 <!-- </font> -->
+
     </center>
   </footer>
-<!-- The Modal -->
+<!-- The Modal 
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
+  -- Modal content 
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
@@ -344,17 +253,13 @@
   </div>
 
 </div>
+-->
 
 <script src="js/jszip.js"></script>
 <script src="js/xlsx.js"></script>
-<!-- <script src="js/cookie.js"></script> -->
-<script src="js/table.js" id="tbl"></script>
-<script src="js/modal.js"></script>
-<script src="js/convertuni.js"></script>
-<script src="sun.js" > </script>
-<!-- https://stackoverflow.com/questions/1017424/pass-vars-to-javascript-via-the-src-attribute  -->
-<!-- <script type="text/javascript" data-parameter_1="value_1" ... src="sun.js"></script>
--->
+<script src="js/gentable.js" id="tbl"></script>
+
+
 
 <script>
 var debug = false;
@@ -367,46 +272,29 @@ var colValues =[];
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	console.log('DOM fully loaded')
-	fval = document.getElementById('selFont').value;
-	changeFont(fval);
+	//fval = document.getElementById('selFont').value;
+	//changeFont(fval);
 
 });
 
-/*
-var csvData = 'Test Data\n'
-+ '"","questioned","e061","mouth,said,speak: ?","ask"\n'
-+ '"","ashamed","e05f","no,not: mouth: heart",\n'
-+ '"","loaf","e05d","mouth,said,speak: grain,wheat","bread"\n'
-+ '"","boy","e001","small,few: man",\n'
-+ '"me poss","mine",,,"ours:my:our"\n'
-+ '"","blaspheme","e05b","mouth,said,speak,confessiom: bad: no,not: good: king,crown,ruler,lord,master: man: love,compassion","insult:blasphemy"\n'
-+ '"","Apelles","ebcd","man:split,divide,division,separate","looks_like"\n'
-+ '"","Levi","eb1b","man: with: equal,same: people",\n'
-+ '"","chariot","EC82","horse: chair,sit",\n'
-+ '"","Cilicia","EB5B","hair: face: fabric,clothing: land,ground,earth",\n'
-+ '"","Nahor","EC6E","man: air",\n';
-*/
 
-function fixUnicode(lines) {
-	console.log('fix');
-	var t0 = performance.now();
+var csvData = ',,,,,,,,,,,,\n'+
+',,,"Holmstad Wood Shop – Inventory",,,,,,,,,\n'+
+',,,"Date",,,"Sorted by Storage Box Number",,,,,,\n'+
+',,,,,,,,,,,,\n'+
+',,,"Box'+
+'Number","Moved to'+
+'Box #","No. of'+
+'Items","Item Description","Sort Criteria",,,"Price tag'+
+'Each",,\n'+
+',,,,,,,"General","Specifig","Other",,,"Item Maker"\n'+
+',,,1,,6,"Spoons, wooden – large - 12”","Household","Kitchen/serve",,$4.00,,"David L"\n'+
+',,,1.1,,2,"Spoons, wooden – 5”","Household","Kitchen/serve",,$4.00,,"David L"\n'+
+',,,1.2,,6,"Spoons, wooden – 6” to 10”","Household","Kitchen/serve",,$4.00,,"David L"\n'+
+',,,2,,4,"Cats, sitting on shelf – painted by Lupe","Decor","Knick-knack","Animal",$15.00,,"Dave A"\n'+
+',,,3,,6,"Vases, bud type, bark ………","Decor",,,$10.00,,"???"\n';
 
-	for (var i = 0; i < lines.length; i ++) {
-		rowx = lines[i]
-			j = 0
-			var uni = rowx[j];
-			if (uni.length === 3) {
-				var hArry = toHexArray(uni);
-				uni = convertUTF82CP(hArry).toLowerCase();
-				var char = unescape('%u' + uni);
-				lines[i][j] = char;
-			}
-	}
-	console.log('csvfix',lines);
-	var t1 = performance.now();
-	console.log("fixUnicode " + (t1 - t0) + " milliseconds.");
-	return lines;
-}
+//console.log(csvData)
 
 var process_wb = (function() {
 	var OUT = document.getElementById('output');
@@ -436,7 +324,7 @@ var process_wb = (function() {
         csv = to_csv(wb);
 		output = csvToArray(csv);
 		console.log(output)
-		if (CSV) output = fixUnicode(output);
+		//if (CSV) output = fixUnicode(output);
 		generateTable(output);
 		//var ta = performance.now();
 		//for ( i = 0; i < 3; i++){
@@ -508,7 +396,7 @@ var do_file = (function() {
 
 //document.getElementById('sfont').value = "";
 document.getElementById('xlf').value = ""; 
-
+/*
 function optChangeFont() {
 	fval = document.getElementById('selFont').value;
 	getFont(fval);
@@ -549,7 +437,7 @@ function changeFont(f) {
 	document.documentElement.style.setProperty('--sun-font', f);
 	
 }
-
+*/
 function replaceAll(string, search, replace) {
   return string.split(search).join(replace);
 }
@@ -571,17 +459,10 @@ function setSrch(e) {
 	search_Table()
 }
 
-function showDebug() {
-	e =document.getElementById('showdebug').checked;
-	if (e) {
-		generateTable(jscsvToArray(csvData));
-		//table_mismatch();
-	} else {
-		document.getElementById("output").innerHTML = ""
-	}
-}
-
-generateTable(jscsvToArray(csvData));
+ary = csvToArray(csvData)
+console.log(ary)
+//ary = removeLeading3(ary)
+generateTable(ary);
 
 /*
 if (debug) {
