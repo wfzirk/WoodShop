@@ -10,9 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <title>Search WoodShop Spreadsheet</title>
-<style>
 
-	html { height:100%; }
+<style>
+    @import url("css/woodshop.css");
+    html { height:100%; }
 		
 	body {
 		height: 100%;
@@ -33,7 +34,7 @@
 	footer {
 		color: lightgray;
 	}
-
+		
 	div.filetable {
 		width: 100%
 	}	
@@ -45,129 +46,6 @@
 		scroll-behavior: smooth; 
 	}
 	
-	#splitlabel {
-		font-size: 10px;
-		font-weight: bold;
-	}
-	#lblclear {
-		font-size: 12px;
-		font-weight: bold;
-	}
-	
-	table.xreftable {
-		 border-width: 1px;
-		 border-spacing: 0;
-		 border-style: outset;
-		 border-color: black;
-		 border-collapse: separate; 
-		 background-color: white; 
-		 font-size: 14px;
-		 table-layout: fixed;
-		 margin-bottom: 5px;
-		 width: 100%; 
-		 empty-cells: show;
-
-	}
-	
-	.xreftable caption {
-		color: green;
-	}
-	
-	.xreftable tr {
-		vertical-align: middle;
-		padding-top: 5px;
-	}
-
-	.xreftable td, .xreftable th {
-		border-width: 1px;
-		padding: 1px;
-		border-style: inset;
-		border-color: lightblue;
-		font-size: 14px;
-		word-wrap: break-word;
-		min-width: 25px;
-		
-
-	}
-	
-	.xreftable th {
-		font-weight: bold;
-	}
-
-	.xreftable  td.Col3 , .xreftable  td.Col4, .xreftable  td.Col5  {
-		text-align: right;
-		color: blue;
-		width: 50px;
-	}
-	
-	.xreftable th.Col5 {
-		text-align: center;
-		color: blue;
-		width: 50px;
-	}
-
-	
-	.xreftable  td.Col6 {
-		text-align: left;
-		color: blue;
-		width: 250px;
-	}
-	
-	.xreftable th.Col6 {
-		text-align: center;
-		color: blue;
-		width: 250px;
-	}
-	
-	.xreftable td.Col8 {
-		text-align: left;
-		color: blue;
-		width: 100px;
-	}
-	
-	.xreftable th.Col8 {
-		text-align: center;
-		color: blue;
-		width: 100px;
-	}
-		
-		
-
-		 /*Table Even Rows Styles*/
-	 .xreftable tbody, .xreftable tr:nth-child(even){
-		 background-color: #efefef;
-	 }
-
-		 /*Table ODD Rows Styles*/
-	 .xreftable tbody, .xreftable tr:nth-child(odd){
-		 background-color: #dfdfdf;
-	 }
-
-		 /*Table Row HOver Style*/
-	 .xreftable table, .xreftable tbody, .xreftable tr:hover{
-		 background-color: #ffffd8;
-	 }
-
-
-	.uerror {
-		  color: red;
-	 }
-	.nameerror {
-		  color: gray;
-	 }
-	
-	 
-
-	#drop{
-		border:2px dashed #bbb;
-		border-radius:5px;
-		padding:5px;
-		text-align:center;
-		font:20pt bold,"Vollkorn";color:#bbb
-	}
-	
-
-
 
 </style>
 </head>
@@ -175,49 +53,31 @@
 
 	<form >
 		<div id="title">
-			XREF Search<label style="float:right;">10.5</label>
+			Wood Shop Inventory<label style="float:right;">0.5</label>
 		</div>
 		<fieldset>
 			<div style="padding-bottom:5px;">
 				<label for="xlf" style="float:left;"> <strong>Select ODS, XLSX or CSV File:</strong></label>
 				<input id="xlf"  type="file" name="xlfile" >
-				<!--<label style="float:right;">Debug&nbsp
-					<input type="checkbox" id="showdebug"  onclick="showDebug();">
-				</label>-->
 				<div id="drop">Or drop file here</div>
 			</div>
 
 			<div class="filetable" style="padding-bottom:5px;">
 				<div style="padding-bottom:5px;">
-					<!--<label for="sfont" style="float:left;"> <strong>Sun font&nbsp</strong></label>
-					<input id='sfont' type='text' size="10">-->
-					<select id = "selFont" onChange="optChangeFont()">
-						   <option value = "SUNBF7_8_1210_EN"  >BACKSUN7_8_1210</option>
-						   <option value = "SUN7_8_1210" selected>SUN7_8_1210</option>
-					</select>
-					
-					
-					<label style='float:center;' > <strong>&nbspSearch Type&nbsp</strong>
-						<span id="radiospan" style="border:1px; border-style:solid; ">
-							<input type="radio" id="wordsrch" name="wsrch" value="word" onClick="setSrch(true)" checked>
-							<label for="wordsrch">Word</label>
-							<input type="radio" id="charsrch" name="wsrch" value="char" onClick="setSrch(false)">
-							<label for="charsrch">Char&nbsp</label>
-						</span>
-					</label>
-					<!--<input type="button" id="showerr" style='float: right;' onclick="showError();"  >
-					<label id="splitlabel" for="showerr" style='float: right;'> <strong>Errors<br>Only &nbsp  </strong></label>-->
-										
-				</div>
-
-				<div >
 					<label for="xsearch;" span style='float:left;'> <strong>Search Words &nbsp</strong></label>
 						<input id='xsearch' onkeyup='search_Table("xref1")' type='text' size="40">
 
 					<button type="submit"  onclick='clearTable()'<img> Clear</button>
 					<button type="submit" style='float:right;' onclick='dnldCSV()'<img> Download CSV</button>
-											
-				</div>
+
+				<label style='float:center;' > <strong>&nbspSearch Type&nbsp</strong>
+						<span id="radiospan" style="border:1px; border-style:solid; ">
+							<input type="radio" id="wordsrch" name="wsrch" value="word" onClick="setSrch(false)" >
+							<label for="wordsrch">Word</label>
+							<input type="radio" id="charsrch" name="wsrch" value="char" onClick="setSrch(true)" checked>
+							<label for="charsrch">Char&nbsp</label>
+						</span>
+					</label>
 			</div>
 		</fieldset>
 	</form>

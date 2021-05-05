@@ -36,6 +36,7 @@ function generateTable(lines){
 	table.appendChild(row);
 	var tbody = document.createElement('TBODY');
 	for (var i = 0; i < lines.length; i++) {  // get line
+		if (i < 4) continue
 		if (lines[i].length > 1) {	// process row
 			var row = document.createElement('TR');
 			row.className = "item";
