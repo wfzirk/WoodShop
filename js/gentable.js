@@ -18,7 +18,7 @@ function generateTable(lines){
 		}
 	}
 	*/
-
+	
 	len = lines[6].length
 	table.createCaption();
 	table.caption.innerHTML = lines[0];
@@ -36,16 +36,16 @@ function generateTable(lines){
 	table.appendChild(row);
 	var tbody = document.createElement('TBODY');
 	for (var i = 0; i < lines.length; i++) {  // get line
-		if (i < 4) continue
+		if (i < 3) continue
 		if (lines[i].length > 1) {	// process row
 			var row = document.createElement('TR');
 			row.className = "item";
-			for (var j = 3; j < lines[i].length; j++) {
-				if (i ===0) {
+			for (var j = 0; j < lines[i].length; j++) {
+				/*if (i ===0) {
 					if (j>3) {
 						break
 					}
-				}
+				} */
 				var text = ""
 				var td = document.createElement("TD");
 
