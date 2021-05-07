@@ -13,7 +13,8 @@
 
 <style>
     @import url("css/woodshop.css");
-    html { height:100%; }
+    
+	html { height:100%; }
 		
 	body {
 		height: 100%;
@@ -59,7 +60,9 @@
 			<div style="padding-bottom:5px;">
 				<label for="xlf" style="float:left;"> <strong>Select ODS, XLSX or CSV File:</strong></label>
 				<input id="xlf"  type="file" name="xlfile" >
-				<div id="drop">Or drop file here</div>
+				<div id="drop">
+					Or drop file here <span id="xlfd"> ---- </span>
+				</div>
 			</div>
 
 			<div class="filetable" style="padding-bottom:5px;">
@@ -221,6 +224,7 @@ var do_file = (function() {
 		var rABS = false;
 		var f = files[0];
 		var fname = f["name"];
+		document.getElementById('drop').innerHTML = fname; 
 		var ext = fname.slice((fname.lastIndexOf(".") - 1 >>> 0) + 2).toLowerCase();
 		if (ext === 'csv') CSV = true;
 		else CSV = false;
@@ -269,7 +273,6 @@ var do_file = (function() {
 
 
 
-//document.getElementById('sfont').value = "";
 document.getElementById('xlf').value = ""; 
 /*
 function optChangeFont() {

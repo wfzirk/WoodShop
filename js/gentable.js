@@ -24,7 +24,7 @@ function generateTable(lines){
 	table.caption.innerHTML = lines[0];
 	// make header
 	var row = document.createElement('TR');
-	for (var j = 3; j < len; j++) {
+	for (var j = 3; j < len+3; j++) {
 		var th = document.createElement("TH");
 		th.appendChild(document.createTextNode('col '+j));
 		th.className = 'Col'+j
@@ -124,7 +124,7 @@ function csvToArray(text) {
 		}
 		p = line;
 	}
-	//console.log('csv2array',ret[4]);
+	console.log('csv2array',ret[6]);
 	var t1 = performance.now();
 	console.log("csvToArray " + (t1 - t0) + " milliseconds.");
     return ret;
