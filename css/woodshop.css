@@ -23,69 +23,75 @@
 
 	}
 	
-	.xreftable caption {
+	caption {
+		font-size: 20px;
 		color: green;
 	}
 	
-	.xreftable tr {
+	tr {
 		vertical-align: middle;
 		padding-top: 5px;
 	}
 
-	.xreftable td, .xreftable th {
+	td, th {
 		border-width: 1px;
 		padding: 1px;
 		border-style: inset;
 		border-color: lightblue;
-		font-size: 14px;
-		word-wrap: break-word;
-		min-width: 25px;
-		
+		word-break:break-word;
 
 	}
 	
-	.xreftable th {
+	th {
+		font-size: 16px;
 		font-weight: bold;
+		text-align: center;
+		color: blue;	
 	}
 
-	.xreftable  td.Col3 , .xreftable  td.Col4, .xreftable  td.Col5  {
+	td {
+		font-size: 14px;
+		/*min-width: 15px;*/
+	}
+	
+	th.Col0, th.Col1, th.Col2, th.Col7  {
+		text-align: center;
+		width: 70px;
+	}
+
+	th.Col3 {
+		width: 250px;
+	}
+	
+	th.Col4, th.Col5, th.Col6, th.Col9 {
+		width: 110px;
+	}
+
+	th.Col8 {
+		width: 0px;
+	}
+
+	td.Col0, td.Col1, td.Col2, td.Col7  {
 		text-align: right;
-		color: blue;
-		width: 50px;
+		color: red;
+		padding-right: 15px;
 	}
 	
-	.xreftable th.Col5 {
-		text-align: center;
-		color: blue;
-		width: 50px;
+	td.Col3 {
+		text-align: left;
+		color: green;
+		padding-left: 5px;
+		width: 250px;
 	}
 
 	
-	.xreftable  td.Col6 {
+	td.Col4, td.Col5, td.Col6, td.Col9 {
 		text-align: left;
-		color: blue;
-		width: 250px;
+		color: green;
+		padding-left: 5px;
 	}
 	
-	.xreftable th.Col6 {
-		text-align: center;
-		color: blue;
-		width: 250px;
-	}
-	
-	.xreftable td.Col8 {
-		text-align: left;
-		color: blue;
-		width: 100px;
-	}
-	
-	.xreftable th.Col8 {
-		text-align: center;
-		color: blue;
-		width: 100px;
-	}
-		
-		
+
 
 		 /*Table Even Rows Styles*/
 	 .xreftable tbody, .xreftable tr:nth-child(even){
@@ -102,14 +108,14 @@
 		 background-color: #ffffd8;
 	 }
 
-
+	/*
 	.uerror {
 		  color: red;
 	 }
 	.nameerror {
 		  color: gray;
 	 }
-	
+	*/
 	 
 
 	#drop{

@@ -1,32 +1,76 @@
 
+function removeLeading3(ary) {
+	console.log(typeof(ary))
+	for (i =0; i<ary.length; i++) {
+		
+		ary[i].shift()
+		ary[i].shift()
+		ary[i].shift()
+		//console.log(ary[i]);
+	}
+	return ary
+}
 
-function generateTable(lines){
+function searchStringInArray (str, strArray) {
+    for (var i=0; i < 7; i++) { //     <strArray.length; j++) {
+		//console.log(str, strArray[i].indexOf(str))
+		//console.log(strArray[i].includes(str))
+		for (var j = 0; j<strArray[i].length; j++) {
+			//console.log(str)
+			if (strArray[i][j].indexOf(str) != -1) {
+				console.log(strArray[i][j].indexOf(str), strArray[i][j])
+				return [i,j];
+			}
+		}	
+    }
+    return -1;
+}
+/*
+function findStart(ary) {
+	console.log('findStart', typeof(ary));
+	result = searchStringInArray('Item Description', ary)
+	console.log(result, ary[result[0]][result[1]])
+	if (result[1] === 6) removeLeading3(ary)
+	return ary
+} */
+
+function generateTable(ary){
 	//Clear previous data
 	//findCol(lines)
-	console.log('generateTable');
-	console.log(lines[0].length, lines.length)
+
 	var t0 = performance.now();
+	
+	//lines = findStart(ary)
+	
+	console.log('generateTable');
+	//console.log(lines[0].length, lines.length)
 	document.getElementById("output").innerHTML = "";
 	var table = document.createElement("table");
 	table.id = "searchtable";
 	table.className = 'xreftable';
-	/*var len = 0;
-	for (var i = 0; i < lines.length; i++) {
-		console.log(lines[i].length)
-		if (lines[i].length > len) {
-			len = lines[i].length;
-		}
-	}
-	*/
 	
-	len = lines[6].length
+	result = searchStringInArray('Item Description', ary)
+	if (result[1] === 6) removeLeading3(ary)
+		
+	caprow = searchStringInArray('Holmstad Wood Shop', ary)[0]
+	titlerow = searchStringInArray('Sorted by Storage Box Number', ary)[0]
+	//titlerow1 = titlerow+1
+	firstrow = titlerow+4
+	
+	hdrrow = ["Box Number", "Moved to Box #", "No. of Items", "Item Description", "General", "Specific", "Other", "Price Tag Each", "", "Item Maker"]
+
+    caption = ary[caprow]
+
 	table.createCaption();
-	table.caption.innerHTML = lines[0];
+	table.caption.innerHTML = caption;
 	// make header
+	//ary.shift(3)
+	lines = ary
+	//len = lines[0].length
 	var row = document.createElement('TR');
-	for (var j = 3; j < len+3; j++) {
+	for (var j = 0; j < hdrrow.length; j++) {
 		var th = document.createElement("TH");
-		th.appendChild(document.createTextNode('col '+j));
+		th.appendChild(document.createTextNode(hdrrow[j]));
 		th.className = 'Col'+j
 		var fontCol = 0;
 		row.appendChild(th);
@@ -35,8 +79,8 @@ function generateTable(lines){
 	
 	table.appendChild(row);
 	var tbody = document.createElement('TBODY');
-	for (var i = 0; i < lines.length; i++) {  // get line
-		if (i < 3) continue
+	for (var i = firstrow; i < lines.length; i++) {  // get line
+		//if (i < 3) continue
 		if (lines[i].length > 1) {	// process row
 			var row = document.createElement('TR');
 			row.className = "item";
@@ -91,16 +135,7 @@ function jscsvToArray(text) {
 	return row;
 }
 */
-function removeLeading3(ary) {
-	console.log(typeof(ary))
-	for (i =0; i<ary.length; i++) {
-		ary[i].shift()
-		ary[i].shift()
-		ary[i].shift()
-		console.log(ary[i]);
-	}
-	return ary
-}
+
 
 function csvToArray(text) {
 	console.log(text)
