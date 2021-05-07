@@ -108,21 +108,5 @@
 		 background-color: #ffffd8;
 	 }
 
-	/*
-	.uerror {
-		  color: red;
-	 }
-	.nameerror {
-		  color: gray;
-	 }
-	*/
 	 
 
-	#drop{
-		border:2px dashed #bbb;
-		border-radius:5px;
-		padding:5px;
-		text-align:center;
-		font:20pt bold,"Vollkorn";color:#bbb
-	}
-	
